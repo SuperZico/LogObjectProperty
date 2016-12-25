@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (load)
-
+//将词典转为对象
++(instancetype)modelWithDict:(__kindof NSDictionary *)dic;
+//生成对象属性
 +(NSString *)objFromeDict:(__kindof NSDictionary *)dic;
+
 @end

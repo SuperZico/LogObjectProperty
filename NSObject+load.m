@@ -7,8 +7,8 @@
 //
 
 #import "NSObject+load.h"
-#import "NSObject+load.h"
 #import <objc/message.h>
+
 @implementation NSObject (load)
 +(NSString *)objFromeDict:(__kindof NSDictionary *)dic{
     NSMutableString * str=[NSMutableString string];
@@ -52,7 +52,7 @@
             NSString * str=[propertyType substringFromIndex:2];
             NSRange range= [str rangeOfString:@"\""];
             str= [str substringToIndex:range.location];
-            Class  Typeclass=NSClassFromString(str);//将java转为类
+            Class  Typeclass=NSClassFromString(str);//用类名转为类
             value = [Typeclass modelWithDict:value];
         }
         if (value) {//value有值才传，不然会崩
